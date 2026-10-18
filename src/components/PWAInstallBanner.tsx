@@ -19,7 +19,7 @@ export function PWAInstallBanner() {
     if (typeof window === 'undefined') return;
 
     if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-      navigator.serviceWorker.register('/sw.js').catch(() => {});
+      navigator.serviceWorker.register(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/sw.js`).catch(() => {});
     }
 
     const isIosDevice =
@@ -79,7 +79,7 @@ export function PWAInstallBanner() {
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-3">
           <img
-            src="/icon.svg?v=3"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icon.svg?v=3`}
             alt="ECG App Icon"
             className="w-11 h-11 rounded-xl border border-teal-500/30 shadow-sm flex-shrink-0"
           />

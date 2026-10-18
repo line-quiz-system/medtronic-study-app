@@ -10,7 +10,7 @@ export function Header() {
       <div className="mx-auto flex h-14 sm:h-16 max-w-5xl items-center justify-between px-3.5 sm:px-6">
         <Link href="/" className="flex items-center space-x-2.5 group min-w-0">
           <img
-            src="/icon.svg?v=3"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icon.svg?v=3`}
             alt="ECG Icon"
             className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl shadow-sm border border-teal-500/30 group-hover:scale-105 transition-transform shrink-0"
           />

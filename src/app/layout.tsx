@@ -4,18 +4,20 @@ import { Header } from '@/components/Header';
 import { BottomNav } from '@/components/BottomNav';
 import { PWAInstallBanner } from '@/components/PWAInstallBanner';
 
+const bp = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: 'Medtronic Academy - アクティブリコール学習',
   description: 'Medtronic Academy High Power (CRT / ICD) アクティブリコール想起訓練Webアプリ',
-  manifest: '/manifest.json',
+  manifest: `${bp}/manifest.json`,
   icons: {
     icon: [
-      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
-      { url: '/icon-192x192.png?v=3', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512x512.png?v=3', sizes: '512x512', type: 'image/png' },
+      { url: `${bp}/favicon.svg?v=3`, type: 'image/svg+xml' },
+      { url: `${bp}/icon-192x192.png?v=3`, sizes: '192x192', type: 'image/png' },
+      { url: `${bp}/icon-512x512.png?v=3`, sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png?v=3', sizes: '180x180', type: 'image/png' },
+      { url: `${bp}/apple-touch-icon.png?v=3`, sizes: '180x180', type: 'image/png' },
     ],
   },
   appleWebApp: {
